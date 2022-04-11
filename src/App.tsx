@@ -1,14 +1,13 @@
 import { Container, CssBaseline, Divider, Grid, Paper, Stack, TextField, Typography } from "@mui/material";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "./paypal-logo.png";
 
 const App = () => {
   const [amount, setAmount] = useState<number>(0);
-
   const [result, setResult] = useState<number>(0);
 
   useEffect(() => {
-    if (amount > 0) {
+    if (amount >= 0) {
       // Applying fees
       setResult((amount / (1 - 0.054)) + 0.3);
     }
