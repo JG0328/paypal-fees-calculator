@@ -25,7 +25,7 @@ const App = () => {
                 <Grid container item>
                   <Grid container item spacing={3} alignItems={"center"}>
                     <Grid item>
-                      <img src={logo} width={48} />
+                      <img alt={"PayPal Logo"} src={logo} width={48} />
                     </Grid>
                     <Grid item>
                       <Typography variant={"h6"}>
