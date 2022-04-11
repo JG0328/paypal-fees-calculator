@@ -4,6 +4,7 @@ import logo from "./paypal-logo.png";
 
 const App = () => {
   const [amount, setAmount] = useState<number>(0);
+  const [fee, setFee] = useState<number>(0);
   const [result, setResult] = useState<number>(0);
 
   useEffect(() => {
@@ -12,6 +13,13 @@ const App = () => {
       setResult((amount / (1 - 0.054)) + 0.3);
     }
   }, [amount]);
+
+  useEffect(() => {
+    if (result >= 0) {
+      // Getting fee
+      setFee(result - amount);
+    }
+  }, [result]);
 
   return (
     <Container component={"main"} maxWidth={"md"}>
@@ -42,16 +50,16 @@ const App = () => {
             {/* Calculator */}
             <Grid container item>
               <Grid container item spacing={3} alignItems={"center"}>
-                <Grid item>
+                <Grid item xs={12} sm>
                   <TextField label={"Transaction Amount ($)"} variant={"filled"} type={"number"} value={amount} onChange={e => setAmount(Number(e.target.value))} />
                 </Grid>
+                <Grid item xs={12} sm>
+                  <TextField label={"Fee To Apply ($)"} value={fee.toFixed(2)} variant={"filled"} disabled />
+                </Grid>
+                <Grid item xs={12} sm>
+                  <TextField label={"Result ($)"} value={result.toFixed(2)} variant={"filled"} disabled />
+                </Grid>
               </Grid>
-            </Grid>
-            {/* Resut */}
-            <Grid item>
-              <Typography>
-                Result: $ {result.toFixed(2)}
-              </Typography>
             </Grid>
           </Grid>
         </Paper>
