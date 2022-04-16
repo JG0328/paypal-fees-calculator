@@ -1,6 +1,7 @@
-import { Container, CssBaseline, Divider, Grid, Paper, Stack, TextField, Typography } from "@mui/material";
+import { Button, Container, CssBaseline, Divider, Grid, Paper, Stack, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import logo from "./paypal-logo.png";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const App = () => {
   const [amount, setAmount] = useState<number>(0);
@@ -51,13 +52,35 @@ const App = () => {
             <Grid container item>
               <Grid container item spacing={3} alignItems={"center"}>
                 <Grid item xs={12} sm>
-                  <TextField label={"Transaction Amount ($)"} variant={"filled"} type={"number"} value={amount} onChange={e => setAmount(Number(e.target.value))} />
+                  <TextField label={"Transaction Amount ($)"} variant={"filled"} type={"number"} value={amount} onChange={e => setAmount(Number(e.target.value))} fullWidth />
                 </Grid>
                 <Grid item xs={12} sm>
-                  <TextField label={"Fee To Apply ($)"} value={fee.toFixed(2)} variant={"filled"} disabled />
+                  <TextField label={"Fee To Apply ($)"} value={fee.toFixed(2)} variant={"filled"} disabled fullWidth />
                 </Grid>
                 <Grid item xs={12} sm>
-                  <TextField label={"Result ($)"} value={result.toFixed(2)} variant={"filled"} disabled />
+                  <TextField label={"Result ($)"} value={result.toFixed(2)} variant={"filled"} disabled fullWidth />
+                </Grid>
+              </Grid>
+            </Grid>
+            {/* Bottom section */}
+            <Grid container item>
+              <Grid container item spacing={1} direction={"column"}>
+                <Grid item>
+                  <Divider />
+                </Grid>
+                <Grid container item>
+                  <Grid container item spacing={3} justifyContent={"flex-end"}>
+                    <Grid item>
+                      <Button
+                        variant={"contained"}
+                        LinkComponent={"a"}
+                        href={"https://github.com/JG0328/paypal-fees-calculator"}
+                        target={"_blank"}
+                      >
+                        <GitHubIcon />
+                      </Button>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
