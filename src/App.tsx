@@ -8,6 +8,8 @@ const App = () => {
   const [fee, setFee] = useState<number>(0);
   const [result, setResult] = useState<number>(0);
 
+  const handleAmountChange = (event: React.ChangeEvent<HTMLInputElement>) => setAmount(Number(event.target.value));
+
   useEffect(() => {
     if (amount >= 0) {
       // Applying fees
@@ -52,7 +54,7 @@ const App = () => {
             <Grid container item>
               <Grid container item spacing={3} alignItems={"center"}>
                 <Grid item xs={12} sm>
-                  <TextField label={"Transaction Amount ($)"} variant={"filled"} type={"number"} value={amount} onChange={e => setAmount(Number(e.target.value))} fullWidth />
+                  <TextField label={"Transaction Amount ($)"} variant={"filled"} type={"number"} value={amount.toString()} onChange={handleAmountChange} fullWidth />
                 </Grid>
                 <Grid item xs={12} sm>
                   <TextField label={"Fee To Apply ($)"} value={fee.toFixed(2)} variant={"filled"} disabled fullWidth />
