@@ -19,7 +19,7 @@ const App = () => {
       // Getting fee
       setFee(result - amount);
     }
-  }, [result]);
+  }, [result, amount]);
 
   return (
     <Container component={"main"} maxWidth={"md"}>
