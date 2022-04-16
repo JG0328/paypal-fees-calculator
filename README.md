@@ -6,4 +6,4 @@ The current applied fee is **0.3 + 5.4%**.
 
 ## Run the project
 
-npm start
+`npm start`
