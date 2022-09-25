@@ -1,4 +1,4 @@
-# PayPal Fees Calculator [![Build React App](https://github.com/JG0328/paypal-fees-calculator/actions/workflows/build_react.yml/badge.svg?branch=master)](https://github.com/JG0328/paypal-fees-calculator/actions/workflows/build_react.yml)
+# PayPal Fees Calculator [![Build](https://github.com/JG0328/paypal-fees-calculator/actions/workflows/build_react.yml/badge.svg)](https://github.com/JG0328/paypal-fees-calculator/actions/workflows/build_react.yml)
 
 I developed this small web application to calculate a fixed fee charged by PayPal, when doing transactions on their platform.
 
