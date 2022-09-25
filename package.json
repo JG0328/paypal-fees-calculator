@@ -2,7 +2,6 @@
   "name": "paypal-fees-calculator",
   "version": "0.1.1",
   "private": true,
-  "homepage": "https://JG0328.github.io/paypal-fees-calculator",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -15,8 +14,6 @@
     "typescript": "^4.6.3"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
