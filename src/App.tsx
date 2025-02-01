@@ -6,10 +6,9 @@ import {
     Divider, FilledInput, FormControl,
     Grid2,
     InputAdornment, InputLabel,
-    Paper,
-    Typography
+    Paper
 } from "@mui/material";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from './Components/Footer';
 import Navbar from "./Components/Navbar";
 
