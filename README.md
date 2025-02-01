@@ -2,8 +2,8 @@
 
 I developed this small web application to calculate a fixed fee charged by PayPal, when doing transactions on their platform.
 
-The current applied fee is **0.3 + 5.4%**.
+The current applied fee is **5.4% + 0.30**.
 
 ## Run the project
 
-`npm start`
+`yarn run start`
