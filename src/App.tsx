@@ -1,18 +1,18 @@
+import GitHubIcon from '@mui/icons-material/GitHub';
 import {
     Button,
     Container,
     CssBaseline,
     Divider, FilledInput, FormControl,
-    Grid,
+    Grid2,
     InputAdornment, InputLabel,
     Paper,
     Stack,
-    TextField,
     Typography
 } from "@mui/material";
-import React, {useEffect, useState} from "react";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import Navbar from "./Navbar";
+import React, { useEffect, useState } from "react";
+import Footer from './Components/Footer';
+import Navbar from "./Components/Navbar";
 
 const App = () => {
     const [amount, setAmount] = useState<number>(1.000);
@@ -37,14 +37,14 @@ const App = () => {
 
     return (
         <>
-            <Navbar/>
-            <Container disableGutters component={"main"} maxWidth={"sm"} sx={{pt: 8, pb: 6}}>
-                <CssBaseline/>
-                <Stack sx={{margin: 4}}>
-                    <Paper elevation={3} sx={{width: "100%", padding: 4}}>
-                        <Grid container spacing={3} direction={"column"}>
+            <Navbar />
+            <Container disableGutters component={"main"} maxWidth={"sm"} sx={{ pt: 8, pb: 6 }}>
+                <CssBaseline />
+                <Stack sx={{ margin: 4 }}>
+                    <Paper elevation={3} sx={{ width: "100%", padding: 4 }}>
+                        <Grid2 container spacing={3} direction={"column"}>
                             {/* Calculator */}
-                            <Grid item>
+                            <Grid2>
                                 <FormControl fullWidth variant={"filled"}>
                                     <InputLabel htmlFor={"transaction-amount"}>Transaction</InputLabel>
                                     <FilledInput
@@ -56,8 +56,8 @@ const App = () => {
                                         fullWidth
                                     />
                                 </FormControl>
-                            </Grid>
-                            <Grid item>
+                            </Grid2>
+                            <Grid2>
                                 <FormControl fullWidth variant={"filled"}>
                                     <InputLabel htmlFor={"fee-amount"}>Fee</InputLabel>
                                     <FilledInput
@@ -71,8 +71,8 @@ const App = () => {
                                         fullWidth
                                     />
                                 </FormControl>
-                            </Grid>
-                            <Grid item>
+                            </Grid2>
+                            <Grid2>
                                 <FormControl fullWidth variant={"filled"}>
                                     <InputLabel htmlFor={"result-amount"}>Total</InputLabel>
                                     <FilledInput
@@ -86,38 +86,39 @@ const App = () => {
                                         fullWidth
                                     />
                                 </FormControl>
-                            </Grid>
+                            </Grid2>
                             {/* Bottom section */}
-                            <Grid item container>
-                                <Grid item container spacing={1} direction={"column"}>
-                                    <Grid item>
-                                        <Divider/>
-                                    </Grid>
-                                    <Grid item container>
-                                        <Grid item container spacing={3} alignItems={"center"} justifyContent={"space-between"}>
-                                            <Grid item>
+                            <Grid2 container>
+                                <Grid2 container spacing={1} direction={"column"}>
+                                    <Grid2>
+                                        <Divider />
+                                    </Grid2>
+                                    <Grid2 container>
+                                        <Grid2 container spacing={3} alignItems={"center"} justifyContent={"space-between"}>
+                                            <Grid2>
                                                 <Typography variant={"overline"}>
                                                     Using <strong>5.4% + 0.30 Fee</strong>
                                                 </Typography>
-                                            </Grid>
-                                            <Grid item>
+                                            </Grid2>
+                                            <Grid2>
                                                 <Button
                                                     variant={"contained"}
                                                     LinkComponent={"a"}
                                                     href={"https://github.com/JG0328/paypal-fees-calculator"}
                                                     target={"_blank"}
                                                 >
-                                                    <GitHubIcon/>
+                                                    <GitHubIcon />
                                                 </Button>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
+                                            </Grid2>
+                                        </Grid2>
+                                    </Grid2>
+                                </Grid2>
+                            </Grid2>
+                        </Grid2>
                     </Paper>
                 </Stack>
             </Container>
+            <Footer />
         </>
     )
 }
