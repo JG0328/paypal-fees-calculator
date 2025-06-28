@@ -33,9 +33,9 @@ const App = () => {
     return (
         <>
             <Navbar />
-            <Container disableGutters component={"main"} maxWidth={"sm"} sx={{ pt: 8, pb: 6 }}>
+            <Container disableGutters component={"main"} maxWidth={"sm"} sx={{ p: 2 }}>
                 <CssBaseline />
-                <Paper elevation={3} sx={{ width: "100%", p: 4, m: 4 }}>
+                <Paper elevation={3} sx={{ p: 2 }}>
                     <Grid2 container spacing={3} direction={"column"}>
                         <Grid2 size={12} container spacing={3}>
                             <Grid2 size={{ xs: 12, md: 6 }}>

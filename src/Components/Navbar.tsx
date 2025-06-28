@@ -3,7 +3,7 @@ import logo from "../paypal-logo.png";
 
 const Navbar = () => {
     return (
-        <AppBar>
+        <AppBar position={"relative"}>
             <Toolbar>
                 <img src={logo} alt={"PayPal Logo"} width={28} />
                 <Typography variant={"h6"} component={"div"} sx={{ ml: 2, fg: 1 }}>
